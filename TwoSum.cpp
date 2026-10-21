@@ -1,45 +1,20 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
+#include "TwoSum.hpp"
 
-using namespace std;
+std::vector<int> Solution::twoSum(const std::vector<int> &nums, const int &target) {
+   std::unordered_map<int, int> map;
+   int pair;
+   std::unordered_map<int, int>::const_iterator got;
 
-class Solution {
+   for (std::size_t i = 0; i < nums.size(); i++) {
 
-public:
-   vector<int> twoSum(const vector<int> &nums, const int &target) {
-      unordered_map<int, int> map;
-      int pair;
-      unordered_map<int, int>::const_iterator got;
+      pair = target - nums[i];
+      
+      got = map.find(pair);
+      if (got != map.end())
+         return {static_cast<int>(got->second), static_cast<int>(i)};
 
-      for (size_t i = 0; i < nums.size(); i++) {
-
-         pair = target - nums[i];
-         
-         got = map.find(pair);
-         if (got != map.end())
-            return {static_cast<int>(got->second), static_cast<int>(i)};
-
-         map.insert({nums[i], i});
-
-      }
-
-      return {};
-   }
-};
-
-int main() {   
-
-   Solution solu;
-   auto result = solu.twoSum({1,2,4,3}, 6);
-   if (result.empty()) {
-      cout << "Nenhuma solução encontrada" << endl;
-      return 0;
+      map.insert({nums[i], i});
    }
 
-   cout << "Resultado da busca: " << endl;
-   for (int index : result)
-      cout << index << endl;
-
-   return 0;
+   return {};
 }
