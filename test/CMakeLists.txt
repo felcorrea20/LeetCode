@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 3.8)
 
 set(This Tests_Leetcode)
 
-set(Sources "Tests_TwoSum.cpp"
-            "Tests_PowerOfTwo.cpp")
+set(Sources "Tests_AddDigits.cpp"
+            "Tests_PowerOfTwo.cpp"
+            "Tests_TwoSum.cpp")
 
 add_executable(${This} ${Sources})
 

@@ -1,14 +1,14 @@
 #include "PowerOfTwo.hpp"
 
-bool Solution::isPowerOfTwo(int n) {
+bool Solution::isPowerOfTwo(int target) {
    int expoente = 0; 
    int resultado = 0;
-   int base = (n >= 0) ? 2 : -2;
-   int max_expoente = (n >= 0) ? 30 : 31;
+   const int BASE = 2;
+   const int MAX_EXPOENTE = 30;
 
    do {
-      resultado = std::pow(base, expoente);
-   } while (expoente++ <= max_expoente && resultado != n);
+      resultado = std::pow(BASE, expoente);
+   } while (++expoente <= MAX_EXPOENTE && resultado != target);
 
-   return resultado == n;
+   return resultado == target;
 }
