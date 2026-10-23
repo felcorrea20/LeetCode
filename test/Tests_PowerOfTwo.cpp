@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "PowerOfTwo.hpp"
+#include "src/PowerOfTwo.hpp"
 
 TEST(PowerOfTwo, resultExpected)
 {

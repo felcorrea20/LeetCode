@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "TwoSum.hpp"
+#include "src/TwoSum.hpp"
 
 TEST(TwoSum, example)
 {

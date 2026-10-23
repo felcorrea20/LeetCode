@@ -12,11 +12,11 @@ enable_testing()
 
 add_subdirectory(googletest)
 
-set(Headers "TwoSum.hpp"
-            "PowerOfTwo.hpp")
+set(Headers "src/TwoSum.hpp"
+            "src/PowerOfTwo.hpp")
             
-set(Sources "TwoSum.cpp"
-            "PowerOfTwo.cpp")
+set(Sources "src/TwoSum.cpp"
+            "src/PowerOfTwo.cpp")
 
 add_library(${This} STATIC ${Sources} ${Headers})
 
