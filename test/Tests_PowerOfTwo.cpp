@@ -22,11 +22,14 @@ TEST(PowerOfTwo, maxNumber)
    Solution solucao;
    bool result = solucao.isPowerOfTwo(std::pow(2, 30));
    ASSERT_TRUE(result);
+
+   result = solucao.isPowerOfTwo(2147483647);
+   ASSERT_FALSE(result);
 }
 
 TEST(PowerOfTwo, minNumber)
 {
    Solution solucao;
    bool result = solucao.isPowerOfTwo(std::pow(-2, 31));
-   ASSERT_TRUE(result);
+   ASSERT_FALSE(result);
 }
