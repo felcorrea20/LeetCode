@@ -4,6 +4,7 @@ set(This Tests_Leetcode)
 
 set(Sources "Tests_AddDigits.cpp"
             "Tests_PowerOfTwo.cpp"
+            "Tests_RemoveDuplicatesFromSortedArray.cpp"
             "Tests_TwoSum.cpp")
 
 add_executable(${This} ${Sources})
