@@ -10,14 +10,16 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 enable_testing()
 
-add_subdirectory(googletest)
+add_subdirectory(lib/googletest)
 
 set(Headers "src/AddDigits.hpp"
             "src/PowerOfTwo.hpp"
+            "src/RemoveDuplicatesFromSortedArray.hpp"
             "src/TwoSum.hpp")
             
 set(Sources "src/AddDigits.cpp"
             "src/PowerOfTwo.cpp"
+            "src/RemoveDuplicatesFromSortedArray.cpp"
             "src/TwoSum.cpp")
 
 add_library(${This} STATIC ${Sources} ${Headers})
